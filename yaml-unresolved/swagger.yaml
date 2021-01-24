@@ -1,0 +1,351 @@
+openapi: 3.0.0
+info:
+  description: API for exchanging SAP-ECC info at Hans Anders
+  version: v1-oas3
+  title: SAP API
+  contact:
+    email: richard.kooijman@inergy.nl
+tags:
+  - name: admins
+    description: Secured Admin-only calls
+  - name: developers
+    description: Operations available to regular developers
+paths:
+  /articles:
+    put:
+      tags:
+        - admins
+      summary: add article info
+      operationId: addArticles
+      description: Adds articles
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArticleList'
+        description: List of articles to add
+      responses:
+        '200':
+          description: items processed
+        '400':
+          description: 'invalid input, object invalid'
+  /article-valuations:
+    put:
+      tags:
+        - admins
+      summary: add article valuation info
+      operationId: addArticleValutions
+      description: Adds article valuations
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArticleValuationList'
+        description: List of article valuations to add
+      responses:
+        '200':
+          description: items processed
+        '400':
+          description: 'invalid input, object invalid'
+  /locations:
+    put:
+      tags:
+        - admins
+      summary: add locations info
+      operationId: addLocations
+      description: Adds locations
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LocationList'
+        description: List of locations to add
+      responses:
+        '200':
+          description: items processed
+        '400':
+          description: 'invalid input, object invalid'
+  /receipts:
+    put:
+      tags:
+        - admins
+      summary: add receipts info
+      operationId: addReceipts
+      description: Adds receipts
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReceiptList'
+        description: List of receipts to add
+      responses:
+        '200':
+          description: items processed
+        '400':
+          description: 'invalid input, object invalid'
+  /stock-levels:
+    put:
+      tags:
+        - admins
+      summary: add stock levels info
+      operationId: addStockLevels
+      description: Adds stock levels
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StockLevelList'
+        description: List of stock levels to add
+      responses:
+        '200':
+          description: items processed
+        '400':
+          description: 'invalid input, object invalid'
+  /stock-mutations:
+    put:
+      tags:
+        - admins
+      summary: add stock mutations info
+      operationId: addStockMutations
+      description: Adds stock mutations
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StockMutationList'
+        description: List of stock mutations to add
+      responses:
+        '200':
+          description: items processed
+        '400':
+          description: 'invalid input, object invalid'
+  /stockrooms:
+    put:
+      tags:
+        - admins
+      summary: add stockrooms info
+      operationId: addStockrooms
+      description: Adds stockrooms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StockroomList'
+        description: List of stock to add
+      responses:
+        '200':
+          description: items processed
+        '400':
+          description: 'invalid input, object invalid'
+  /suppliers:
+    put:
+      tags:
+        - admins
+      summary: add suppliers info
+      operationId: addSuppliers
+      description: Adds suppliers
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SupplierList'
+        description: List of suppliers to add
+      responses:
+        '200':
+          description: items processed
+        '400':
+          description: 'invalid input, object invalid'
+servers:
+  - url: 'https://virtserver.swaggerhub.com/HansAnders/sap/v1'
+components:
+  schemas:
+    LocationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Location'
+    Location:
+      required:
+        - code
+        - name
+      properties:
+        id:
+          type: string
+          example: L000012012
+        name:
+          type: string
+          example: Location 12012
+    ReceiptList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Receipt'
+    Receipt:
+      required:
+        - id
+        - order-id
+      properties:
+        id:
+          type: string
+          example: S0000101
+        order-id:
+          type: string
+          example: Supplier order ID
+        orderline-id:
+          type: string
+          example: Supplier orderline ID
+        supplier:
+          $ref: '#/components/schemas/Supplier'
+        article:
+          $ref: '#/components/schemas/Article'
+        quantity:
+          type: integer
+    StockroomList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Stockroom'
+    Stockroom:
+      required:
+        - code
+        - name
+      properties:
+        code:
+          type: string
+          example: S0000101
+        name:
+          type: string
+          example: Stockroom 101
+    StockLevelList:
+      type: array
+      items:
+        $ref: '#/components/schemas/StockLevel'
+    StockLevel:
+      required:
+        - id
+        - article
+        - location
+        - stockroom
+      properties:
+        id:
+          type: string
+          example: S000012012
+        company:
+          type: string
+        article:
+          $ref: '#/components/schemas/Article'
+        location:
+          $ref: '#/components/schemas/Location'
+        stockroom:
+          $ref: '#/components/schemas/Stockroom'
+        date:
+          type: string
+          format: date
+        quantity:
+          type: integer
+        vvp:
+          type: number
+    StockMutationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/StockMutation'
+    StockMutation:
+      required:
+        - id
+        - article
+        - date
+        - time
+        - from-location
+        - from-stockroom
+        - to-location
+        - to-stockroom
+        - quantity
+      properties:
+        id:
+          type: string
+          example: S000012012
+        article:
+          $ref: '#/components/schemas/Article'
+        from-location:
+          $ref: '#/components/schemas/Location'
+        from-stockroom:
+          $ref: '#/components/schemas/Stockroom'
+        to-location:
+          $ref: '#/components/schemas/Location'
+        to-stockroom:
+          $ref: '#/components/schemas/Stockroom'
+        date:
+          type: string
+          format: date
+        time:
+          type: string
+          format: time
+        quantity:
+          type: integer
+    ArticleList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Article'
+    Article:
+      required:
+        - code
+      properties:
+        code:
+          type: string
+          example: A000012012
+        company:
+          type: string
+          example: HAN
+        omschrijving:
+          type: string
+          example: Frame
+        goederengroep:
+          type: string
+          example: groep1
+        waarderingsklasse:
+          type: string
+        inkoopgroep:
+          type: string
+        assortimentsniveau:
+          type: string
+        deelassortiment:
+          type: string
+        laatste_datum_goederenontvangst:
+          type: string
+          format: date
+    ArticleValuationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ArticleValuation'
+    ArticleValuation:
+      required:
+        - article
+        - store
+      properties:
+        article:
+          type: string
+          example: A000012012
+        store:
+          type: string
+          example: A003
+        standaardprijs:
+          type: number
+          example: 10.00
+    SupplierList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Supplier'
+    Supplier:
+      required:
+        - name
+      properties:
+        code:
+          type: string
+          example: S0010101
+        name:
+          type: string
+          example: ACME Corporation
+        homePage:
+          type: string
+          format: url
+          example: 'https://www.acme-corp.com'
+        phone:
+          type: string
+          example: 408-867-5309
