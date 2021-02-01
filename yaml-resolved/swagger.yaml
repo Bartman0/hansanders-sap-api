@@ -20,7 +20,7 @@ paths:
       - developers
       summary: add article info
       description: Adds articles
-      operationId: addArticles
+      operationId: app.add_articles
       requestBody:
         description: List of articles to add
         content:
@@ -38,7 +38,7 @@ paths:
       - admins
       summary: add article valuation info
       description: Adds article valuations
-      operationId: addArticleValutions
+      operationId: app.add_article_valutions
       requestBody:
         description: List of article valuations to add
         content:
@@ -56,7 +56,7 @@ paths:
       - admins
       summary: add article conditiontype info
       description: Adds article conditiontypes
-      operationId: addArticleConditiontypes
+      operationId: app.add_article_conditiontypes
       requestBody:
         description: List of article condition types to add
         content:
@@ -74,7 +74,7 @@ paths:
       - admins
       summary: add article preferred supplier info
       description: Adds article preferred supplier
-      operationId: addArticlePreferredSuppliers
+      operationId: app.add_article_preferred_suppliers
       requestBody:
         description: List of article preferred suppliers to add
         content:
@@ -92,7 +92,7 @@ paths:
       - admins
       summary: add locations info
       description: Adds locations
-      operationId: addLocations
+      operationId: app.add_locations
       requestBody:
         description: List of locations to add
         content:
@@ -110,7 +110,7 @@ paths:
       - admins
       summary: add receipts info
       description: Adds receipts
-      operationId: addReceipts
+      operationId: app.add_receipts
       requestBody:
         description: List of receipts to add
         content:
@@ -128,7 +128,7 @@ paths:
       - admins
       summary: add stock levels info
       description: Adds stock levels
-      operationId: addStockLevels
+      operationId: app.add_stock_levels
       requestBody:
         description: List of stock levels to add
         content:
@@ -146,7 +146,7 @@ paths:
       - admins
       summary: add stock mutations info
       description: Adds stock mutations
-      operationId: addStockMutations
+      operationId: app.add_stock_mutations
       requestBody:
         description: List of stock mutations to add
         content:
@@ -164,7 +164,7 @@ paths:
       - admins
       summary: add stockrooms info
       description: Adds stockrooms
-      operationId: addStockrooms
+      operationId: app.add_stockrooms
       requestBody:
         description: List of stock to add
         content:
@@ -182,7 +182,7 @@ paths:
       - admins
       summary: add suppliers info
       description: Adds suppliers
-      operationId: addSuppliers
+      operationId: app.add_suppliers
       requestBody:
         description: List of suppliers to add
         content:
