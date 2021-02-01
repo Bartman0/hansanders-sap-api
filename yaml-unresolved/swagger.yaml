@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   description: API for exchanging SAP-ECC info at Hans Anders
-  version: v1-oas3
+  version: v3
   title: SAP API
   contact:
     email: richard.kooijman@inergy.nl
@@ -10,11 +10,14 @@ tags:
     description: Secured Admin-only calls
   - name: developers
     description: Operations available to regular developers
+servers:
+  - url: 'https://app.swaggerhub.com/apis/HansAnders/sap/v3'
 paths:
   /articles:
     put:
       tags:
         - admins
+        - developers
       summary: add article info
       operationId: addArticles
       description: Adds articles
@@ -42,6 +45,42 @@ paths:
             schema:
               $ref: '#/components/schemas/ArticleValuationList'
         description: List of article valuations to add
+      responses:
+        '200':
+          description: items processed
+        '400':
+          description: 'invalid input, object invalid'
+  /article-conditiontypes:
+    put:
+      tags:
+        - admins
+      summary: add article conditiontype info
+      operationId: addArticleConditiontypes
+      description: Adds article conditiontypes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArticleConditiontypeList'
+        description: List of article condition types to add
+      responses:
+        '200':
+          description: items processed
+        '400':
+          description: 'invalid input, object invalid'
+  /article-preferredsuppliers:
+    put:
+      tags:
+        - admins
+      summary: add article preferred supplier info
+      operationId: addArticlePreferredSuppliers
+      description: Adds article preferred supplier
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArticlePreferredSupplierList'
+        description: List of article preferred suppliers to add
       responses:
         '200':
           description: items processed
@@ -155,8 +194,6 @@ paths:
           description: items processed
         '400':
           description: 'invalid input, object invalid'
-servers:
-  - url: 'https://virtserver.swaggerhub.com/HansAnders/sap/v1'
 components:
   schemas:
     LocationList:
@@ -193,9 +230,11 @@ components:
           type: string
           example: Supplier orderline ID
         supplier:
-          $ref: '#/components/schemas/Supplier'
+          type: string
+          example: S0000101
         article:
-          $ref: '#/components/schemas/Article'
+          type: string
+          example: S0000101
         quantity:
           type: integer
     StockroomList:
@@ -219,65 +258,72 @@ components:
         $ref: '#/components/schemas/StockLevel'
     StockLevel:
       required:
-        - id
-        - article
+        - ID
+        - MATERIAL
         - location
         - stockroom
+        - DATE
+        - QUANTITY
       properties:
-        id:
+        ID:
           type: string
           example: S000012012
-        company:
+        FORMULA:
           type: string
-        article:
-          $ref: '#/components/schemas/Article'
+        MATERIAL:
+          type: string
+          example: "1026160"
         location:
-          $ref: '#/components/schemas/Location'
+          type: string
+          example: "A003"
         stockroom:
-          $ref: '#/components/schemas/Stockroom'
-        date:
+          type: string
+          example: "A003"
+        DATE:
           type: string
           format: date
-        quantity:
+        QUANTITY:
           type: integer
-        vvp:
-          type: number
     StockMutationList:
       type: array
       items:
         $ref: '#/components/schemas/StockMutation'
     StockMutation:
       required:
-        - id
-        - article
-        - date
-        - time
+        - ID
+        - MATERIAL
+        - DATE
+        - TIME
         - from-location
         - from-stockroom
         - to-location
         - to-stockroom
-        - quantity
+        - QUANTITY
       properties:
-        id:
+        ID:
           type: string
           example: S000012012
-        article:
-          $ref: '#/components/schemas/Article'
+        MATERIAL:
+          type: string
+          example: "1026160"
         from-location:
-          $ref: '#/components/schemas/Location'
+          type: string
+          example: "A003"
         from-stockroom:
-          $ref: '#/components/schemas/Stockroom'
+          type: string
+          example: "A003"
         to-location:
-          $ref: '#/components/schemas/Location'
+          type: string
+          example: "A003"
         to-stockroom:
           $ref: '#/components/schemas/Stockroom'
-        date:
+        DATE:
           type: string
           format: date
-        time:
+        TIME:
           type: string
           format: time
-        quantity:
+        QUANTITY:
           type: integer
     ArticleList:
       type: array
@@ -285,29 +331,42 @@ components:
         $ref: '#/components/schemas/Article'
     Article:
       required:
-        - code
+        - MATERIAL
       properties:
-        code:
+        MATERIAL:
           type: string
-          example: A000012012
-        company:
+          example: "1026160"
+        FORMULA:
           type: string
-          example: HAN
-        omschrijving:
+          example: "HAN"
+        MATL_DESC:
           type: string
-          example: Frame
-        goederengroep:
+          example: "TISAKA SHIYU 46100 50-21 EN"
+        MATL_GROUP:
           type: string
-          example: groep1
-        waarderingsklasse:
+          example: "10"
+        VAL_CLASS:
           type: string
-        inkoopgroep:
+          example: "0010"
+        ASSORT_LEV:
           type: string
-        assortimentsniveau:
+          example: "2"
+        PUR_GROUP:
           type: string
-        deelassortiment:
+          example: "210"
+        BRAND:
           type: string
-        laatste_datum_goederenontvangst:
+          example: "HUISMERK"
+        PROD_HIER:
+          type: string
+          example: "000100000100000012"
+        PROD_HIER_DESC:
+          type: string
+          example: "UitbreidingIDoc"
+        MATL_TYPE:
+          type: string
+          example: "HAWA"
+        LAST_DELIVERY_DATE:
           type: string
           format: date
     ArticleValuationList:
@@ -319,33 +378,86 @@ components:
         - article
         - store
       properties:
-        article:
+        MATERIAL:
           type: string
-          example: A000012012
-        store:
+          example: "1026160"
+        VAL_AREA:
           type: string
-          example: A003
-        standaardprijs:
+          example: "A003"
+        STD_PRICE:
           type: number
           example: 10.00
+    ArticleConditiontypeList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ArticleConditiontype'
+    ArticleConditiontype:
+      required:
+        - MATNR
+        - VTWEG
+        - VKORG
+        - KSCHL
+        - KONWA
+        - KBETR
+      properties:
+        MATNR:
+          type: string
+          example: "1026160"
+        VTWEG:
+          type: string
+          example: "HA"
+        VKORG:
+          type: string
+          example: "NL01"
+        KSCHL:
+          type: string
+          example: "VKP0"
+        KONWA:
+          type: string
+          example: "EUR"
+        KBETR:
+          type: number
+          example: 10.00
+    ArticlePreferredSupplierList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ArticlePreferredSupplier'
+    ArticlePreferredSupplier:
+      required:
+        - LIFNR
+        - MATERIAL
+        - RELIF
+      properties:
+        MATERIAL:
+          type: string
+          example: "1013023"
+        LIFNR:
+          type: string
+          example: "101368"
+        RELIF:
+          type: string
+          example: "X"
+
     SupplierList:
       type: array
       items:
         $ref: '#/components/schemas/Supplier'
     Supplier:
       required:
-        - name
+        - LIFNR
       properties:
-        code:
+        LIFNR:
           type: string
-          example: S0010101
-        name:
+          example: "101364"
+        NAME1:
           type: string
-          example: ACME Corporation
-        homePage:
+          example: "Dong Young Eyewear"
+        NAME2:
           type: string
-          format: url
-          example: 'https://www.acme-corp.com'
-        phone:
+          example: "Dong Young Eyewear 2"
+        NAME3:
           type: string
-          example: 408-867-5309
+          example: "Dong Young Eyewear 3"
+        NAME4:
+          type: string
+          example: "Dong Young Eyewear 4"
