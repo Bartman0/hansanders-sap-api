@@ -375,8 +375,8 @@ components:
         $ref: '#/components/schemas/ArticleValuation'
     ArticleValuation:
       required:
-        - article
-        - store
+        - MATERIAL
+        - VAL_AREA
       properties:
         MATERIAL:
           type: string
