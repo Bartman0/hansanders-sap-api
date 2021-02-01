@@ -1,0 +1,462 @@
+openapi: 3.0.0
+info:
+  title: SAP API
+  description: API for exchanging SAP-ECC info at Hans Anders
+  contact:
+    email: richard.kooijman@inergy.nl
+  version: v3
+servers:
+- url: https://app.swaggerhub.com/apis/HansAnders/sap/v3
+tags:
+- name: admins
+  description: Secured Admin-only calls
+- name: developers
+  description: Operations available to regular developers
+paths:
+  /articles:
+    put:
+      tags:
+      - admins
+      - developers
+      summary: add article info
+      description: Adds articles
+      operationId: addArticles
+      requestBody:
+        description: List of articles to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArticleList'
+      responses:
+        "200":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
+  /article-valuations:
+    put:
+      tags:
+      - admins
+      summary: add article valuation info
+      description: Adds article valuations
+      operationId: addArticleValutions
+      requestBody:
+        description: List of article valuations to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArticleValuationList'
+      responses:
+        "200":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
+  /article-conditiontypes:
+    put:
+      tags:
+      - admins
+      summary: add article conditiontype info
+      description: Adds article conditiontypes
+      operationId: addArticleConditiontypes
+      requestBody:
+        description: List of article condition types to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArticleConditiontypeList'
+      responses:
+        "200":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
+  /article-preferredsuppliers:
+    put:
+      tags:
+      - admins
+      summary: add article preferred supplier info
+      description: Adds article preferred supplier
+      operationId: addArticlePreferredSuppliers
+      requestBody:
+        description: List of article preferred suppliers to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArticlePreferredSupplierList'
+      responses:
+        "200":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
+  /locations:
+    put:
+      tags:
+      - admins
+      summary: add locations info
+      description: Adds locations
+      operationId: addLocations
+      requestBody:
+        description: List of locations to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LocationList'
+      responses:
+        "200":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
+  /receipts:
+    put:
+      tags:
+      - admins
+      summary: add receipts info
+      description: Adds receipts
+      operationId: addReceipts
+      requestBody:
+        description: List of receipts to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReceiptList'
+      responses:
+        "200":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
+  /stock-levels:
+    put:
+      tags:
+      - admins
+      summary: add stock levels info
+      description: Adds stock levels
+      operationId: addStockLevels
+      requestBody:
+        description: List of stock levels to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StockLevelList'
+      responses:
+        "200":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
+  /stock-mutations:
+    put:
+      tags:
+      - admins
+      summary: add stock mutations info
+      description: Adds stock mutations
+      operationId: addStockMutations
+      requestBody:
+        description: List of stock mutations to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StockMutationList'
+      responses:
+        "200":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
+  /stockrooms:
+    put:
+      tags:
+      - admins
+      summary: add stockrooms info
+      description: Adds stockrooms
+      operationId: addStockrooms
+      requestBody:
+        description: List of stock to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StockroomList'
+      responses:
+        "200":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
+  /suppliers:
+    put:
+      tags:
+      - admins
+      summary: add suppliers info
+      description: Adds suppliers
+      operationId: addSuppliers
+      requestBody:
+        description: List of suppliers to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SupplierList'
+      responses:
+        "200":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
+components:
+  schemas:
+    LocationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Location'
+    Location:
+      required:
+      - code
+      - name
+      properties:
+        code:
+          type: string
+          example: L000012012
+        name:
+          type: string
+          example: Location 12012
+    ReceiptList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Receipt'
+    Receipt:
+      required:
+      - id
+      - order-id
+      properties:
+        id:
+          type: string
+          example: S0000101
+        order-id:
+          type: string
+          example: Supplier order ID
+        orderline-id:
+          type: string
+          example: Supplier orderline ID
+        supplier:
+          type: string
+          example: S0000101
+        article:
+          type: string
+          example: S0000101
+        quantity:
+          type: integer
+    StockroomList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Stockroom'
+    Stockroom:
+      required:
+      - code
+      - name
+      properties:
+        code:
+          type: string
+          example: S0000101
+        name:
+          type: string
+          example: Stockroom 101
+    StockLevelList:
+      type: array
+      items:
+        $ref: '#/components/schemas/StockLevel'
+    StockLevel:
+      required:
+      - DATE
+      - ID
+      - MATERIAL
+      - QUANTITY
+      - location
+      - stockroom
+      properties:
+        ID:
+          type: string
+          example: S000012012
+        FORMULA:
+          type: string
+        MATERIAL:
+          type: string
+          example: "1026160"
+        location:
+          type: string
+          example: A003
+        stockroom:
+          type: string
+          example: A003
+        DATE:
+          type: string
+          format: date
+        QUANTITY:
+          type: integer
+    StockMutationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/StockMutation'
+    StockMutation:
+      required:
+      - DATE
+      - ID
+      - MATERIAL
+      - QUANTITY
+      - TIME
+      - from-location
+      - from-stockroom
+      - to-location
+      - to-stockroom
+      properties:
+        ID:
+          type: string
+          example: S000012012
+        MATERIAL:
+          type: string
+          example: "1026160"
+        from-location:
+          type: string
+          example: A003
+        from-stockroom:
+          type: string
+          example: A003
+        to-location:
+          type: string
+          example: A003
+        to-stockroom:
+          $ref: '#/components/schemas/Stockroom'
+        DATE:
+          type: string
+          format: date
+        TIME:
+          type: string
+          format: time
+        QUANTITY:
+          type: integer
+    ArticleList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Article'
+    Article:
+      required:
+      - MATERIAL
+      properties:
+        MATERIAL:
+          type: string
+          example: "1026160"
+        FORMULA:
+          type: string
+          example: HAN
+        MATL_DESC:
+          type: string
+          example: TISAKA SHIYU 46100 50-21 EN
+        MATL_GROUP:
+          type: string
+          example: "10"
+        VAL_CLASS:
+          type: string
+          example: "0010"
+        ASSORT_LEV:
+          type: string
+          example: "2"
+        PUR_GROUP:
+          type: string
+          example: "210"
+        BRAND:
+          type: string
+          example: HUISMERK
+        PROD_HIER:
+          type: string
+          example: "000100000100000012"
+        PROD_HIER_DESC:
+          type: string
+          example: UitbreidingIDoc
+        MATL_TYPE:
+          type: string
+          example: HAWA
+        LAST_DELIVERY_DATE:
+          type: string
+          format: date
+    ArticleValuationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ArticleValuation'
+    ArticleValuation:
+      required:
+      - MATERIAL
+      - VAL_AREA
+      properties:
+        MATERIAL:
+          type: string
+          example: "1026160"
+        VAL_AREA:
+          type: string
+          example: A003
+        STD_PRICE:
+          type: number
+          example: 10.0
+    ArticleConditiontypeList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ArticleConditiontype'
+    ArticleConditiontype:
+      required:
+      - KBETR
+      - KONWA
+      - KSCHL
+      - MATNR
+      - VKORG
+      - VTWEG
+      properties:
+        MATNR:
+          type: string
+          example: "1026160"
+        VTWEG:
+          type: string
+          example: HA
+        VKORG:
+          type: string
+          example: NL01
+        KSCHL:
+          type: string
+          example: VKP0
+        KONWA:
+          type: string
+          example: EUR
+        KBETR:
+          type: number
+          example: 10.0
+    ArticlePreferredSupplierList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ArticlePreferredSupplier'
+    ArticlePreferredSupplier:
+      required:
+      - LIFNR
+      - MATERIAL
+      - RELIF
+      properties:
+        MATERIAL:
+          type: string
+          example: "1013023"
+        LIFNR:
+          type: string
+          example: "101368"
+        RELIF:
+          type: string
+          example: X
+    SupplierList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Supplier'
+    Supplier:
+      required:
+      - LIFNR
+      properties:
+        LIFNR:
+          type: string
+          example: "101364"
+        NAME1:
+          type: string
+          example: Dong Young Eyewear
+        NAME2:
+          type: string
+          example: Dong Young Eyewear 2
+        NAME3:
+          type: string
+          example: Dong Young Eyewear 3
+        NAME4:
+          type: string
+          example: Dong Young Eyewear 4
