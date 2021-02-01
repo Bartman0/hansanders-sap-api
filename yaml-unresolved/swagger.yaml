@@ -205,7 +205,7 @@ components:
         - code
         - name
       properties:
-        id:
+        code:
           type: string
           example: L000012012
         name:
