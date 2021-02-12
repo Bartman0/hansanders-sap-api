@@ -4,9 +4,9 @@ info:
   description: API for exchanging SAP-ECC info at Hans Anders
   contact:
     email: richard.kooijman@inergy.nl
-  version: v3
+  version: v4
 servers:
-- url: https://app.swaggerhub.com/apis/HansAnders/sap/v3
+- url: https://virtserver.swaggerhub.com/HansAnders/sap/v3
 tags:
 - name: admins
   description: Secured Admin-only calls
@@ -259,30 +259,27 @@ components:
     StockLevel:
       required:
       - DATE
-      - ID
-      - MATERIAL
-      - QUANTITY
-      - location
-      - stockroom
+      - LABST
+      - LGORT
+      - MATNR
+      - MENGE
+      - WERKS
       properties:
-        ID:
-          type: string
-          example: S000012012
-        FORMULA:
-          type: string
-        MATERIAL:
-          type: string
-          example: "1026160"
-        location:
-          type: string
-          example: A003
-        stockroom:
-          type: string
-          example: A003
         DATE:
           type: string
           format: date
-        QUANTITY:
+        MATNR:
+          type: string
+          example: "1026160"
+        WERKS:
+          type: string
+          example: A003
+        LGORT:
+          type: string
+          example: A003
+        LABST:
+          type: integer
+        MENGE:
           type: integer
     StockMutationList:
       type: array
