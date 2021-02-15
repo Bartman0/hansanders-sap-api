@@ -5,13 +5,14 @@ import threading
 import connexion
 from connexion import NoContent
 import inspect
+import logging
 
 
 # base directory where to put data
 DATA_DIR = "./data"
 
 
-def put_bundle():
+def put_bundle(header_list):
 	# bundle name is the name of the function of the caller of the function that triggered this one,
 	# without the first part before the first '_' character
 	# so with this stack, caller1() -> do_caller2() -> put_bundle(), "do_caller2" will be returned
@@ -23,22 +24,23 @@ def put_bundle():
 	directory = os.path.join(DATA_DIR, bundle_name)
 	if not os.path.exists(directory):
 		os.makedirs(directory)
-	with open(os.path.join(directory, filename), 'w', newline='') as csvfile:
+	with open(os.path.join(directory, filename), 'w') as csvfile:
 		writer = csv.writer(csvfile)
 		body = connexion.request.json
-		print(body)
+		logging.debug(body)
 		count = 0
 		for row in body:
-			print(list(row.keys()))
+			logging.debug(list(row.keys()))
 			if count == 0:
-				writer.writerow(row.keys())
-			writer.writerow(row.values())
+				writer.writerow(header_list)
+			values = [ row.get(col) for col in header_list ]
+			writer.writerow(values)
 			count += 1
 	return NoContent, 201
 
 
 def put_articles():
-	return put_bundle()
+	return put_bundle(['MATERIAL', 'MATL_DESC', 'MATL_TYPE', 'MATL_GROUP', 'VAL_CLASS', 'PUR_GROUP', 'BRAND', 'ASSORT_LEV', 'PROD_HIER', 'PROD_HIER_DESC'])
 
 
 # def put_articles():
@@ -80,7 +82,7 @@ def put_receipts():
 
 
 def put_stock_levels():
-	return NoContent, 201
+	return put_bundle(['DATE', 'MATNR', 'WERKS', 'LGORT', 'LABST', 'MENGE'])
 
 
 def put_stock_mutations():
