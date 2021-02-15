@@ -6,3 +6,5 @@ RUN pip install -r requirements.txt
 
 ADD app app/
 ADD yaml-resolved/swagger.yaml app/
+
+CMD python app/main.py

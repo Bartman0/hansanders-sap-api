@@ -1,0 +1,4 @@
+curl -X PUT "http://localhost:8080//HansAnders/sap/v1/articles" -H  "accept: */*" -H  "Content-Type: application/json" -d @data-articles.txt
+
+curl -X PUT "http://localhost:8080//HansAnders/sap/v1/articles" -H  "accept: */*" -H  "Content-Type: application/json" -d @data-stocklevels.txt
+
