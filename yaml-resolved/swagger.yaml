@@ -6,7 +6,7 @@ info:
     email: richard.kooijman@inergy.nl
   version: v4
 servers:
-- url: https://virtserver.swaggerhub.com/HansAnders/sap/v3
+- url: https://virtserver.swaggerhub.com/HansAnders/sap/v1
 tags:
 - name: admins
   description: Secured Admin-only calls
