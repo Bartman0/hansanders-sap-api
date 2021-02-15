@@ -2,6 +2,7 @@
 Hans Anders SAP API for data exchange between SAP-ECC and the HA DWH
 
 ## Run
+* mkdir data
 * docker-compose build
 * docker-compose up
 
