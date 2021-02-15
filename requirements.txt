@@ -1,0 +1,2 @@
+tornado==6.1
+connexion[swagger-ui]==2.7.0
