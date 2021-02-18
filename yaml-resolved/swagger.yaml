@@ -333,39 +333,45 @@ components:
         MATERIAL:
           type: string
           example: "1026160"
-        FORMULA:
-          type: string
-          example: HAN
         MATL_DESC:
           type: string
           example: TISAKA SHIYU 46100 50-21 EN
+        MATL_TYPE:
+          type: string
+          example: HAWA
         MATL_GROUP:
           type: string
           example: "10"
+        MATL_GROUP_DESC:
+          type: string
+          example: matl_group_desc
         VAL_CLASS:
           type: string
           example: "0010"
-        ASSORT_LEV:
+        VAL_CLASS_DESC:
           type: string
-          example: "2"
+          example: val_class_desc
         PUR_GROUP:
           type: string
           example: "210"
+        PUR_GROUP_DESC:
+          type: string
+          example: pur_group_desc
         BRAND:
           type: string
           example: HUISMERK
+        ASSORT_LEV:
+          type: string
+          example: "2"
+        ASSORT_LEV_DESC:
+          type: string
+          example: "2"
         PROD_HIER:
           type: string
           example: "000100000100000012"
         PROD_HIER_DESC:
           type: string
           example: UitbreidingIDoc
-        MATL_TYPE:
-          type: string
-          example: HAWA
-        LAST_DELIVERY_DATE:
-          type: string
-          format: date
     ArticleValuationList:
       type: array
       items:
