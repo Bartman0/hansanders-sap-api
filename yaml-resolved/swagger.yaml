@@ -28,7 +28,7 @@ paths:
             schema:
               $ref: '#/components/schemas/ArticleList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -46,7 +46,7 @@ paths:
             schema:
               $ref: '#/components/schemas/ArticleValuationList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -64,7 +64,7 @@ paths:
             schema:
               $ref: '#/components/schemas/ArticleConditiontypeList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -82,7 +82,7 @@ paths:
             schema:
               $ref: '#/components/schemas/ArticlePreferredSupplierList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -100,7 +100,7 @@ paths:
             schema:
               $ref: '#/components/schemas/LocationList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -118,7 +118,7 @@ paths:
             schema:
               $ref: '#/components/schemas/ReceiptList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -136,7 +136,7 @@ paths:
             schema:
               $ref: '#/components/schemas/StockLevelList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -154,7 +154,7 @@ paths:
             schema:
               $ref: '#/components/schemas/StockMutationList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -172,7 +172,7 @@ paths:
             schema:
               $ref: '#/components/schemas/StockroomList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -190,7 +190,7 @@ paths:
             schema:
               $ref: '#/components/schemas/SupplierList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
