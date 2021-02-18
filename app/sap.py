@@ -40,7 +40,7 @@ def put_bundle(header_list):
 
 
 def put_articles():
-	return put_bundle(['MATERIAL', 'MATL_DESC', 'MATL_TYPE', 'MATL_GROUP', 'VAL_CLASS', 'PUR_GROUP', 'BRAND', 'ASSORT_LEV', 'PROD_HIER', 'PROD_HIER_DESC'])
+	return put_bundle(['MATERIAL', 'MATL_DESC', 'MATL_TYPE', 'MATL_GROUP', 'MATL_GROUP_DESC', 'VAL_CLASS', 'VAL_CLASS_DESC', 'PUR_GROUP', 'PUR_GROUP_DESC' ,'BRAND', 'ASSORT_LEV', 'ASSORT_LEV_DESC', 'PROD_HIER', 'PROD_HIER_DESC'])
 
 
 # def put_articles():

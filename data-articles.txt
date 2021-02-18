@@ -1,61 +1,18 @@
 [
-   {
-      "MATERIAL":"1003759",
-      "MATL_DESC":"Ray-Ban 2045 54 W3121",
-      "MATL_TYPE":"HAWA",
-      "MATL_GROUP":"30",
-      "VAL_CLASS":"0030",
-      "PUR_GROUP":"230",
-      "BRAND":"RAY-BAN",
-      "ASSORT_LEV":"5",
-      "PROD_HIER":"000300005300000053",
-      "PROD_HIER_DESC":"IDocuitbreiding"
-   },
-   {
-      "MATERIAL":"1004359",
-      "MATL_DESC":"MAANDLENS - 0.75      *  1",
-      "MATL_TYPE":"HAWA",
-      "MATL_GROUP":"40",
-      "VAL_CLASS":"0100",
-      "PUR_GROUP":"300",
-      "ASSORT_LEV":"5",
-      "PROD_HIER":"0010000004",
-      "PROD_HIER_DESC":"IDocuitbreiding"
-   },
-   {
-      "MATERIAL":"1009414",
-      "MATL_DESC":"Maxmara 111 49-17 S5E",
-      "MATL_TYPE":"HAWA",
-      "MATL_GROUP":"10",
-      "VAL_CLASS":"0010",
-      "PUR_GROUP":"210",
-      "BRAND":"MAXMARA",
-      "ASSORT_LEV":"3",
-      "PROD_HIER":"000100005300000021",
-      "PROD_HIER_DESC":"IDocuitbreiding"
-   },
-   {
-      "MATERIAL":"1009605",
-      "MATL_DESC":"Huiscollectie 358 51-17 CRBRLI",
-      "MATL_TYPE":"HAWA",
-      "MATL_GROUP":"10",
-      "VAL_CLASS":"0010",
-      "PUR_GROUP":"210",
-      "BRAND":"HUISCOLLECTIE",
-      "ASSORT_LEV":"3",
-      "PROD_HIER":"000100005100000021",
-      "PROD_HIER_DESC":"IDocuitbreiding"
-   },
-   {
-      "MATERIAL":"1013145",
-      "MATL_DESC":"Les Parant 98389 52-19 GR",
-      "MATL_TYPE":"HAWA",
-      "MATL_GROUP":"10",
-      "VAL_CLASS":"0010",
-      "PUR_GROUP":"210",
-      "BRAND":"LES PARANT",
-      "ASSORT_LEV":"2",
-      "PROD_HIER":"000100000100000011",
-      "PROD_HIER_DESC":"IDocuitbreiding"
-   }
+  {
+    "ASSORT_LEV": "2",
+    "ASSORT_LEV_DESC": "2",
+    "BRAND": "HUISMERK",
+    "MATERIAL": "1026160",
+    "MATL_DESC": "TISAKA SHIYU 46100 50-21 EN",
+    "MATL_GROUP": "10",
+    "MATL_GROUP_DESC": "matl_group_desc",
+    "MATL_TYPE": "HAWA",
+    "PROD_HIER": "000100000100000012",
+    "PROD_HIER_DESC": "UitbreidingIDoc",
+    "PUR_GROUP": "210",
+    "PUR_GROUP_DESC": "pur_group_desc",
+    "VAL_CLASS": "0010",
+    "VAL_CLASS_DESC": "val_class_desc"
+  }
 ]
