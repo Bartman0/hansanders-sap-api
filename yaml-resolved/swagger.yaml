@@ -4,9 +4,9 @@ info:
   description: API for exchanging SAP-ECC info at Hans Anders
   contact:
     email: richard.kooijman@inergy.nl
-  version: v3
+  version: "5"
 servers:
-- url: https://app.swaggerhub.com/apis/HansAnders/sap/v3
+- url: https://virtserver.swaggerhub.com/HansAnders/sap/v1
 tags:
 - name: admins
   description: Secured Admin-only calls
@@ -28,7 +28,7 @@ paths:
             schema:
               $ref: '#/components/schemas/ArticleList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -46,7 +46,7 @@ paths:
             schema:
               $ref: '#/components/schemas/ArticleValuationList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -64,7 +64,7 @@ paths:
             schema:
               $ref: '#/components/schemas/ArticleConditiontypeList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -82,7 +82,7 @@ paths:
             schema:
               $ref: '#/components/schemas/ArticlePreferredSupplierList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -100,7 +100,7 @@ paths:
             schema:
               $ref: '#/components/schemas/LocationList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -118,7 +118,7 @@ paths:
             schema:
               $ref: '#/components/schemas/ReceiptList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -136,7 +136,7 @@ paths:
             schema:
               $ref: '#/components/schemas/StockLevelList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -154,7 +154,7 @@ paths:
             schema:
               $ref: '#/components/schemas/StockMutationList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -172,7 +172,7 @@ paths:
             schema:
               $ref: '#/components/schemas/StockroomList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -190,7 +190,7 @@ paths:
             schema:
               $ref: '#/components/schemas/SupplierList'
       responses:
-        "200":
+        "201":
           description: items processed
         "400":
           description: invalid input, object invalid
@@ -259,30 +259,27 @@ components:
     StockLevel:
       required:
       - DATE
-      - ID
-      - MATERIAL
-      - QUANTITY
-      - location
-      - stockroom
+      - LABST
+      - LGORT
+      - MATNR
+      - MENGE
+      - WERKS
       properties:
-        ID:
-          type: string
-          example: S000012012
-        FORMULA:
-          type: string
-        MATERIAL:
-          type: string
-          example: "1026160"
-        location:
-          type: string
-          example: A003
-        stockroom:
-          type: string
-          example: A003
         DATE:
           type: string
           format: date
-        QUANTITY:
+        MATNR:
+          type: string
+          example: "1026160"
+        WERKS:
+          type: string
+          example: A003
+        LGORT:
+          type: string
+          example: A003
+        LABST:
+          type: integer
+        MENGE:
           type: integer
     StockMutationList:
       type: array
@@ -336,39 +333,45 @@ components:
         MATERIAL:
           type: string
           example: "1026160"
-        FORMULA:
-          type: string
-          example: HAN
         MATL_DESC:
           type: string
           example: TISAKA SHIYU 46100 50-21 EN
+        MATL_TYPE:
+          type: string
+          example: HAWA
         MATL_GROUP:
           type: string
           example: "10"
+        MATL_GROUP_DESC:
+          type: string
+          example: matl_group_desc
         VAL_CLASS:
           type: string
           example: "0010"
-        ASSORT_LEV:
+        VAL_CLASS_DESC:
           type: string
-          example: "2"
+          example: val_class_desc
         PUR_GROUP:
           type: string
           example: "210"
+        PUR_GROUP_DESC:
+          type: string
+          example: pur_group_desc
         BRAND:
           type: string
           example: HUISMERK
+        ASSORT_LEV:
+          type: string
+          example: "2"
+        ASSORT_LEV_DESC:
+          type: string
+          example: "2"
         PROD_HIER:
           type: string
           example: "000100000100000012"
         PROD_HIER_DESC:
           type: string
           example: UitbreidingIDoc
-        MATL_TYPE:
-          type: string
-          example: HAWA
-        LAST_DELIVERY_DATE:
-          type: string
-          format: date
     ArticleValuationList:
       type: array
       items:
