@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  ha-sap:
+    build: .
+    image: ha/sap:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+    stdin_open: true
+    tty: true
+
