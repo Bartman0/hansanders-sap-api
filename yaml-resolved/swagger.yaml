@@ -378,6 +378,8 @@ components:
         $ref: '#/components/schemas/ArticleValuation'
     ArticleValuation:
       required:
+      - CURRENCY
+      - DATE
       - MATERIAL
       - VAL_AREA
       properties:
@@ -387,6 +389,12 @@ components:
         VAL_AREA:
           type: string
           example: A003
+        DATE:
+          type: string
+          format: date
+        CURRENCY:
+          type: string
+          example: EUR
         STD_PRICE:
           type: number
           example: 10.0
