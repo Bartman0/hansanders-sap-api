@@ -4,7 +4,7 @@ info:
   description: API for exchanging SAP-ECC info at Hans Anders
   contact:
     email: richard.kooijman@inergy.nl
-  version: v4
+  version: "5"
 servers:
 - url: https://virtserver.swaggerhub.com/HansAnders/sap/v1
 tags:
@@ -378,6 +378,8 @@ components:
         $ref: '#/components/schemas/ArticleValuation'
     ArticleValuation:
       required:
+      - CREDAT
+      - CURR_CODE
       - MATERIAL
       - VAL_AREA
       properties:
@@ -387,6 +389,12 @@ components:
         VAL_AREA:
           type: string
           example: A003
+        CREDAT:
+          type: string
+          format: date
+        CURR_CODE:
+          type: string
+          example: EUR
         STD_PRICE:
           type: number
           example: 10.0
