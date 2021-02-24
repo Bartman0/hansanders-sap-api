@@ -62,7 +62,7 @@ def put_articles():
 
 
 def put_article_valuations():
-	return NoContent, 201
+	return put_bundle(['MATERIAL', 'VAL_AREA', 'CREDAT', 'CURR_CODE', 'STD_PRICE'])
 
 
 def put_article_conditiontypes():

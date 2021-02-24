@@ -1,0 +1,23 @@
+[
+      {
+         "MATERIAL": "1009605",
+         "VAL_AREA": "A002",
+         "STD_PRICE": 7.8500,
+         "CURR_CODE": "EUR",
+         "CREDAT": "2021-02-22"
+      },
+      {
+         "MATERIAL": "1009605",
+         "VAL_AREA": "CD01",
+         "STD_PRICE": 7.8500,
+         "CURR_CODE": "EUR",
+         "CREDAT": "2021-02-22"
+      },
+      {
+         "MATERIAL": "1009605",
+         "VAL_AREA": "Z002",
+         "STD_PRICE": 4.4500,
+         "CURR_CODE": "SEK",
+         "CREDAT": "2021-02-22"
+      }
+]
