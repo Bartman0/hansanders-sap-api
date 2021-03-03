@@ -258,14 +258,14 @@ components:
         $ref: '#/components/schemas/StockLevel'
     StockLevel:
       required:
-      - DATE
       - LABST
       - LGORT
       - MATNR
       - MENGE
+      - TIMESTAMP
       - WERKS
       properties:
-        DATE:
+        TIMESTAMP:
           type: string
           description: Date of stock
           format: date
