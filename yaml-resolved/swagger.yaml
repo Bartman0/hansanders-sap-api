@@ -261,7 +261,6 @@ components:
       - LABST
       - LGORT
       - MATNR
-      - MENGE
       - TIMESTAMP
       - WERKS
       properties:
