@@ -82,7 +82,7 @@ def put_receipts():
 
 
 def put_stock_levels():
-	return put_bundle(['DATE', 'MATNR', 'WERKS', 'LGORT', 'LABST', 'MENGE'])
+	return put_bundle(['TIMESTAMP', 'MATNR', 'WERKS', 'LGORT', 'LABST', 'MENGE'])
 
 
 def put_stock_mutations():
