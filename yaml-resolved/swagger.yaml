@@ -258,8 +258,6 @@ components:
         $ref: '#/components/schemas/StockLevel'
     StockLevel:
       required:
-      - LABST
-      - LGORT
       - MATNR
       - TIMESTAMP
       - WERKS
