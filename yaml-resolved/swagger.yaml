@@ -176,6 +176,24 @@ paths:
           description: items processed
         "400":
           description: invalid input, object invalid
+  /material-posting-date:
+    put:
+      tags:
+      - admins
+      summary: add material posting date info
+      description: Adds material postings dates
+      operationId: sap.put_material_posting_date
+      requestBody:
+        description: List of material posting date
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MaterialPostingDateList'
+      responses:
+        "201":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
   /suppliers:
     put:
       tags:
@@ -479,3 +497,29 @@ components:
         NAME4:
           type: string
           example: Dong Young Eyewear 4
+    MaterialPostingDateList:
+      type: array
+      items:
+        $ref: '#/components/schemas/MaterialPostingDate'
+    MaterialPostingDate:
+      required:
+      - BUDAT_MKPF
+      - BWART
+      - MATNR
+      - WERKS
+      properties:
+        MATNR:
+          type: string
+          example: "101364"
+        WERKS:
+          type: string
+          example: A002
+        BWART:
+          type: string
+          example: "561"
+        BUDAT_MKPF:
+          type: string
+          example: "00000000"
+        TIMESTAMP:
+          type: string
+          example: "20210304"
