@@ -95,3 +95,8 @@ def put_stockrooms():
 
 def put_suppliers():
 	return NoContent, 201
+
+
+def put_material_posting_date():
+	return put_bundle(['MATNR', 'WERKS', 'BWART', 'BUDAT_MKPF', 'TIMESTAMP'])
+
