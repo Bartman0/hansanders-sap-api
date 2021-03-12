@@ -1,8 +1,8 @@
 version: "3.8"
 services:
-  ha-sap:
+  sap-rest-api:
     build: .
-    image: ha/sap:latest
+    image: hansanders.azurecr.io/sap-rest-api:0.9
     ports:
       - "8080:8080"
     volumes:

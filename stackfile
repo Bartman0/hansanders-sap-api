@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  sap-rest-api:
+    image: hansanders.azurecr.io/sap-rest-api:0.9
+    configs:
+      - source: sap-rest-api-config
+        target: /config/sap-rest-api.config
+    secrets:
+      - source: sap-rest-api-secret
+        target: /config/sap-rest-api.secret
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+      resources:
+        limits:
+          memory: '750M'
+    ports:
+      - "8080:8080"
+    volumes:
+      - /data/hansanders/sap:/data
+configs:
+  sap-rest-api-config:
+    file: ./sap-rest-api.config
+secrets:
+  sap-rest-api-secret:
+    file: ./sap-rest-api.secret
