@@ -100,3 +100,7 @@ def put_suppliers():
 def put_material_posting_date():
 	return put_bundle(['MATNR', 'WERKS', 'BWART', 'BUDAT_MKPF', 'TIMESTAMP'])
 
+
+def put_material_class():
+	return put_bundle(['CLASS', 'KSCHL'])
+
