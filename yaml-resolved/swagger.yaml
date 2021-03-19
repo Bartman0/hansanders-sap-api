@@ -212,6 +212,24 @@ paths:
           description: items processed
         "400":
           description: invalid input, object invalid
+  /material-class:
+    put:
+      tags:
+      - admins
+      summary: add material class info
+      description: Adds material class
+      operationId: sap.put_material_class
+      requestBody:
+        description: List of material classes to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MaterialClassList'
+      responses:
+        "201":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
 components:
   schemas:
     LocationList:
@@ -523,3 +541,18 @@ components:
         TIMESTAMP:
           type: string
           example: "20210304"
+    MaterialClassList:
+      type: array
+      items:
+        $ref: '#/components/schemas/MaterialClass'
+    MaterialClass:
+      required:
+      - CLASS
+      - KSCHL
+      properties:
+        CLASS:
+          type: string
+          example: "10"
+        KSCHL:
+          type: string
+          example: Monturen
