@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  sap-rest-api:
+    image: hansanders.azurecr.io/sap-rest-api:0.9.1
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+      resources:
+        limits:
+          memory: '500M'
+    ports:
+      - "8083:8080"
+    volumes:
+      - /data/hansanders/sap/dev:/data
+

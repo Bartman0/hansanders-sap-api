@@ -1,12 +1,11 @@
 version: "3.8"
 services:
-  ha-sap:
+  sap-rest-api:
     build: .
-    image: ha/sap:latest
+    image: hansanders.azurecr.io/sap-rest-api:0.9.1
     ports:
       - "8080:8080"
     volumes:
       - ./data:/data
-    stdin_open: true
-    tty: true
-
+    deploy:
+      replicas: 1

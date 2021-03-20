@@ -82,7 +82,7 @@ def put_receipts():
 
 
 def put_stock_levels():
-	return put_bundle(['DATE', 'MATNR', 'WERKS', 'LGORT', 'LABST', 'MENGE'])
+	return put_bundle(['TIMESTAMP', 'MATNR', 'WERKS', 'LGORT', 'LABST', 'MENGE'])
 
 
 def put_stock_mutations():
@@ -95,3 +95,12 @@ def put_stockrooms():
 
 def put_suppliers():
 	return NoContent, 201
+
+
+def put_material_posting_date():
+	return put_bundle(['MATNR', 'WERKS', 'BWART', 'BUDAT_MKPF', 'TIMESTAMP'])
+
+
+def put_material_class():
+	return put_bundle(['CLASS', 'KSCHL'])
+
