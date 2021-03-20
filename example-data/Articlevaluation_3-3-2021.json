@@ -1,0 +1,569 @@
+[
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "A002",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "CD01",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "CD12",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "CD13",
+		"STD_PRICE": 34.0300,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "CD99",
+		"STD_PRICE": 34.0300,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D007",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D008",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D009",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D010",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D011",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D012",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D013",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D015",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D016",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D017",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D018",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D019",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D021",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D022",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D023",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D024",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D025",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D026",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D027",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D028",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D029",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D030",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D031",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D032",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D033",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D034",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D035",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D036",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D038",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D039",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D040",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D041",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D042",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D043",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D044",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D045",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D046",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D048",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D050",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D052",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D053",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D054",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D055",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D056",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D057",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D058",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D060",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D062",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D063",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D065",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D066",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D067",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D068",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D069",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D071",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D072",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D073",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D074",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D075",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D076",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D077",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D078",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D079",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D080",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D081",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D082",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D083",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D084",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D085",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D086",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D087",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D088",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D091",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "D092",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "XD01",
+		"STD_PRICE": 34.0300,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	},
+	{
+		"MATERIAL": "1010615",
+		"VAL_AREA": "XV01",
+		"STD_PRICE": 26.2100,
+		"CURR_CODE": "EUR",
+		"CREDAT": "2021-02-24"
+	}
+]

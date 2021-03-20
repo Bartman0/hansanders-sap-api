@@ -1,0 +1,6 @@
+[
+  {
+    "CLASS": "10",
+    "KSCHL": "Monturen"
+  }
+]
