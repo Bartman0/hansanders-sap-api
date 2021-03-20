@@ -9,3 +9,8 @@ services:
       - ./data:/data
     deploy:
       replicas: 1
+    secrets:
+     - sap_password
+secrets:
+  sap_password:
+    file: sap-rest-api.sap.secret
