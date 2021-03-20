@@ -4,9 +4,11 @@ info:
   description: API for exchanging SAP-ECC info at Hans Anders
   contact:
     email: richard.kooijman@inergy.nl
-  version: "5"
+  version: "6"
 servers:
 - url: https://virtserver.swaggerhub.com/HansAnders/sap/v1
+security:
+- basicAuth: []
 tags:
 - name: admins
   description: Secured Admin-only calls
@@ -176,6 +178,24 @@ paths:
           description: items processed
         "400":
           description: invalid input, object invalid
+  /material-posting-date:
+    put:
+      tags:
+      - admins
+      summary: add material posting date info
+      description: Adds material postings dates
+      operationId: sap.put_material_posting_date
+      requestBody:
+        description: List of material posting date
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MaterialPostingDateList'
+      responses:
+        "201":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
   /suppliers:
     put:
       tags:
@@ -189,6 +209,24 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SupplierList'
+      responses:
+        "201":
+          description: items processed
+        "400":
+          description: invalid input, object invalid
+  /material-class:
+    put:
+      tags:
+      - admins
+      summary: add material class info
+      description: Adds material class
+      operationId: sap.put_material_class
+      requestBody:
+        description: List of material classes to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MaterialClassList'
       responses:
         "201":
           description: items processed
@@ -258,29 +296,32 @@ components:
         $ref: '#/components/schemas/StockLevel'
     StockLevel:
       required:
-      - DATE
-      - LABST
-      - LGORT
       - MATNR
-      - MENGE
+      - TIMESTAMP
       - WERKS
       properties:
-        DATE:
+        TIMESTAMP:
           type: string
+          description: Date of stock
           format: date
         MATNR:
           type: string
+          description: Material
           example: "1026160"
         WERKS:
           type: string
+          description: Plant
           example: A003
         LGORT:
           type: string
-          example: A003
+          description: Storage location
+          example: "001"
         LABST:
           type: integer
+          description: Stock
         MENGE:
           type: integer
+          description: In transit
     StockMutationList:
       type: array
       items:
@@ -385,18 +426,23 @@ components:
       properties:
         MATERIAL:
           type: string
+          description: Material, i.e. article code
           example: "1026160"
         VAL_AREA:
           type: string
+          description: Value area, i.e. store (code)
           example: A003
         CREDAT:
           type: string
+          description: Starting date of this valuation
           format: date
         CURR_CODE:
           type: string
+          description: Currency code of the standard price
           example: EUR
         STD_PRICE:
           type: number
+          description: Standard price, i.e. article valuation in currency CURR_CODE
           example: 10.0
     ArticleConditiontypeList:
       type: array
@@ -471,3 +517,48 @@ components:
         NAME4:
           type: string
           example: Dong Young Eyewear 4
+    MaterialPostingDateList:
+      type: array
+      items:
+        $ref: '#/components/schemas/MaterialPostingDate'
+    MaterialPostingDate:
+      required:
+      - BUDAT_MKPF
+      - BWART
+      - MATNR
+      - WERKS
+      properties:
+        MATNR:
+          type: string
+          example: "101364"
+        WERKS:
+          type: string
+          example: A002
+        BWART:
+          type: string
+          example: "561"
+        BUDAT_MKPF:
+          type: string
+          example: "00000000"
+        TIMESTAMP:
+          type: string
+          example: "20210304"
+    MaterialClassList:
+      type: array
+      items:
+        $ref: '#/components/schemas/MaterialClass'
+    MaterialClass:
+      required:
+      - CLASS
+      - KSCHL
+      properties:
+        CLASS:
+          type: string
+          example: "10"
+        KSCHL:
+          type: string
+          example: Monturen
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
