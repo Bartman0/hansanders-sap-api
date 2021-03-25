@@ -66,11 +66,11 @@ def put_article_valuations():
 
 
 def put_article_conditiontypes():
-	return NoContent, 201
+	return put_bundle(['MATNR', 'VTWEG', 'VKORG', 'KSCHL', 'KONWA', 'KBETR'])
 
 
 def put_article_preferred_suppliers():
-	return NoContent, 201
+	return put_bundle(['MATERIAL', 'LIFNR', 'RELIF'])
 
 
 def put_locations():
@@ -86,15 +86,15 @@ def put_stock_levels():
 
 
 def put_stock_mutations():
-	return NoContent, 201
+	return put_bundle(['ID', 'MATERIAL', 'DATE', 'TIME', 'from-location', 'from-stockroom', 'to-location', 'to-stockroom', 'QUANTITY'])
 
 
 def put_stockrooms():
-	return NoContent, 201
+	return put_bundle(['code', 'name'])
 
 
 def put_suppliers():
-	return NoContent, 201
+	return put_bundle(['LIFNR', 'NAME1', 'NAME2', 'NAME3', 'NAME4'])
 
 
 def put_material_posting_date():
